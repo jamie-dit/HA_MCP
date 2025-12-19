@@ -35,6 +35,8 @@ RUN npm ci --production=false \
 # Make scripts executable
 RUN chmod +x /etc/services.d/mcp-server/run \
     && chmod +x /etc/services.d/mcp-server/finish \
+    && chmod +x /etc/services.d/nginx/run \
+    && chmod +x /etc/services.d/nginx/finish \
     && chmod +x /etc/cont-init.d/*.sh \
     && chmod +x /etc/cont-finish.d/*.sh \
     && chmod +x /usr/bin/mcp-server

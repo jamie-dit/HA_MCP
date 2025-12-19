@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Add-on: Claude AI MCP Bridge
+# Runs nginx for ingress support
+# ==============================================================================
+
+bashio::log.info "Starting nginx..."
+
+exec nginx -g "daemon off;error_log /dev/stdout info;"

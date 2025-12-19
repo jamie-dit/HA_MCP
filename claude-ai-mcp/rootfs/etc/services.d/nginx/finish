@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Add-on: Claude AI MCP Bridge
+# Nginx finish script
+# ==============================================================================
+
+bashio::log.info "nginx stopped"
+
+if [[ "${1}" -ne 0 ]] && [[ "${1}" -ne 256 ]]; then
+    bashio::log.error "nginx crashed with exit code ${1}"
+fi
