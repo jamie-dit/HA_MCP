@@ -6,7 +6,7 @@ on:
       - published
 
 env:
-  BUILD_ARGS: "--all --push"
+  BUILD_ARGS: "--all"
 
 jobs:
   release:
@@ -24,7 +24,7 @@ jobs:
         id: info
         uses: home-assistant/actions/helpers/info@master
         with:
-          path: "./${{ matrix.addon }}"
+          path: "./claude-ai-mcp"
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -37,11 +37,11 @@ jobs:
         uses: home-assistant/builder@master
         with:
           args: |
-            ${{ env.BUILD_ARGS }} \
             --all \
-            --target /data \
+            --target /data/claude-ai-mcp \
             --docker-hub "ghcr.io/${{ github.repository_owner }}" \
-            --image "${{ steps.info.outputs.image }}"
+            --image "claude-ai-mcp-{arch}" \
+            --push
 
   repository:
     name: Update repository
