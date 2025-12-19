@@ -1,5 +1,5 @@
 name: "Claude AI MCP Bridge for Smart Home Control"
-version: "1.0.1"
+version: "1.0.2"
 slug: "claude_ai_mcp"
 description: "Connect Claude Desktop to Home Assistant using Model Context Protocol (MCP) - Control your smart home with natural language through Claude AI"
 url: "https://github.com/jamie-dit/HA_MCP/tree/main/claude-ai-mcp"
