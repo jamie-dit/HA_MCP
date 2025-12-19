@@ -11,8 +11,8 @@ on:
 
 env:
   ADDON_NAME: claude-ai-mcp
-  DOCKERHUB_REPO: mtebusi/ha-claude-ai-mcp
-  GHCR_REPO: ghcr.io/mtebusi/addon-claude-ai-mcp
+  DOCKERHUB_REPO: jamiedit/ha-claude-ai-mcp
+  GHCR_REPO: ghcr.io/jamie-dit/claude-ai-mcp
 
 jobs:
   release:
@@ -160,7 +160,7 @@ jobs:
             ### 🏠 Home Assistant Installation
             Add this repository to your Home Assistant:
             ```
-            https://github.com/mtebusi/ha-mcp
+            https://github.com/jamie-dit/HA_MCP
             ```
           draft: false
           prerelease: false

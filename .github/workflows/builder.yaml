@@ -12,7 +12,7 @@ on:
       - published
 
 env:
-  BUILD_ARGS: "--all --test"
+  BUILD_ARGS: "--test"
   MONITORED_FILES: "build.yaml config.yaml Dockerfile"
 
 jobs:

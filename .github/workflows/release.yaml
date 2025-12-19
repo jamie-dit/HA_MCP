@@ -5,9 +5,6 @@ on:
     types:
       - published
 
-env:
-  BUILD_ARGS: "--all"
-
 jobs:
   release:
     name: Release add-ons
@@ -15,16 +12,6 @@ jobs:
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v4
-
-      - name: 🔍 Find add-on directories
-        id: addons
-        uses: home-assistant/actions/helpers/find-addons@master
-
-      - name: Get information
-        id: info
-        uses: home-assistant/actions/helpers/info@master
-        with:
-          path: "./claude-ai-mcp"
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -37,7 +24,8 @@ jobs:
         uses: home-assistant/builder@master
         with:
           args: |
-            --all \
+            --amd64 \
+            --aarch64 \
             --target /data/claude-ai-mcp \
             --docker-hub "ghcr.io/${{ github.repository_owner }}" \
             --image "claude-ai-mcp-{arch}" \

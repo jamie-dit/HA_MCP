@@ -21,8 +21,8 @@ on:
 
 env:
   ADDON_NAME: claude-ai-mcp
-  DOCKERHUB_REPO: mtebusi/homeassistant-mcp-addon
-  GHCR_REPO: ghcr.io/mtebusi/addon-claude-ai-mcp
+  DOCKERHUB_REPO: jamiedit/homeassistant-mcp-addon
+  GHCR_REPO: ghcr.io/jamie-dit/claude-ai-mcp
 
 jobs:
   build:
@@ -113,10 +113,10 @@ jobs:
             org.opencontainers.image.title=Claude AI MCP Bridge
             org.opencontainers.image.description=Connect Claude Desktop to Home Assistant using Model Context Protocol
             org.opencontainers.image.vendor=Home Assistant Add-on
-            org.opencontainers.image.authors=Matt Busi <me@mattbusi.com>
+            org.opencontainers.image.authors=Jamie <jamie@dreamithost.com.au>
             org.opencontainers.image.licenses=Apache-2.0
-            org.opencontainers.image.url=https://github.com/mtebusi/ha-mcp
-            org.opencontainers.image.source=https://github.com/mtebusi/ha-mcp
+            org.opencontainers.image.url=https://github.com/jamie-dit/HA_MCP
+            org.opencontainers.image.source=https://github.com/jamie-dit/HA_MCP
             org.opencontainers.image.created=${{ steps.build_args.outputs.BUILD_DATE }}
             org.opencontainers.image.revision=${{ steps.build_args.outputs.BUILD_REF }}
             org.opencontainers.image.version=${{ steps.build_args.outputs.BUILD_VERSION }}
